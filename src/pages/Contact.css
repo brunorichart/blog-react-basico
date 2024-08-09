@@ -1,0 +1,13 @@
+/* Estilos personalizados para a página de contato */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+  
+h1 {
+  color: #343a40;
+}
+  

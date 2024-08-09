@@ -12,19 +12,31 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Posts from './pages/Posts'; // Importar o novo componente
 import PostDetail from './pages/PostDetail';
+import Login from './pages/Login';
+
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/posts" element={<Posts />} /> {/* Adicionar a rota para posts */}
-          <Route path="/posts/:id" element={<PostDetail />} /> {/* Adicionar a rota para visualizar post */}
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Layout>
-    </Router>
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/*
+            <Route
+              path="/posts"
+              element={
+                <ProtectedRoute element={<Posts />} />
+              }
+            />
+            */}
+            <Route path="/posts" element={<Posts />} />
+            <Route path="/posts/:id" element={<PostDetail />} /> {/* Adicionar a rota para visualizar post */}
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </Layout>
+      </Router>
   );
 }
 
